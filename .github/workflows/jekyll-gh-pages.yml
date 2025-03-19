@@ -30,11 +30,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '2.7' # Specify the Ruby version if needed
+      - name: Install Jekyll
+        run: |
+          gem install bundler
+          gem install jekyll -v 5.1.2
+      - name: Build with Jekyll
+        run: |
+          bundle install
+          jekyll build --source . --destination ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
