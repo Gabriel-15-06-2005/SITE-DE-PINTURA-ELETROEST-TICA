@@ -7,151 +7,30 @@
     <meta name="description" content="Serviços de pintura eletrostática de alta qualidade.">
     <title>Site de Pintura Eletrostática</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
-        header {
-            background-color: #2c5f2d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            color: white;
-        }
-        nav {
-            background-color: #3a7d44;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-        }
-        h1, h2 {
-            color: #2c5f2d;
-        }
-        .cta {
-            background-color: #97bc62;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .cta p {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .cta a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .cta a:hover {
-            text-decoration: underline;
-        }
-        .carrossel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 10px;
-            padding: 10px;
-        }
-        .carrossel div {
-            min-width: 100px;
-            height: 100px;
-            scroll-snap-align: center;
-            border: 1px solid #ccc;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-        }
-        .preto { background-color: #000000; color: white; }
-        .cinza { background-color: #808080; color: white; }
-        .branco { background-color: #ffffff; }
-        .bronze { background-color: #8c7853; color: white; }
-        .marrom { background-color: #654321; color: white; }
-        .perita { background-color: #d4af37; color: black; }
-        .aco-corten { background-color: #965a38; color: white; }
-        .perita-gold { background-color: #ffcc00; color: black; }
-        .verde-claro { background-color: #90EE90; color: black; }
-        .parceiros img {
-            max-width: 150px;
-            margin: 10px;
-        }
-        footer {
-            background-color: #2c5f2d;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Bem-vindo ao Nosso Site</h1>
         <nav>
             <ul>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <p>Oferecemos pintura eletrostática de alta qualidade.</p>
-    </section>
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Somos especialistas em pintura eletrostática com anos de experiência.</p>
-    </section>
-    <section id="galeria">
-        <h2>Galeria</h2>
-        <img src="assets/img/exemplo.jpg" alt="Exemplo de pintura eletrostática em alumínio">
-        <img src="assets/img/exemplo.jpg" alt="Exemplo de pintura eletrostática em alumínio">
-        <img src="assets/img/exemplo.jpg" alt="Exemplo de pintura eletrostática em alumínio">
-    </section>
-    <section id="parceiros">
-        <h2>Parceiros</h2>
-        <div class="parceiros">
-            <img src="assets/img/decal.png" alt="Logo da Decal - O seu melhor Perfil">
-            <img src="assets/img/decamp.png" alt="Logo da Nova Decamp Alumínio">
-            <img src="assets/img/montecor.png" alt="Logo da Montecor - Pintura Eletrostática em Alumínio">
+    <section id="conteudo">
+        <div class="bloco">
+            <h2>Serviços</h2>
+            <p>Oferecemos pintura eletrostática de alta qualidade.</p>
+        </div>
+        <div class="bloco">
+            <h2>Sobre Nós</h2>
+            <p>Somos especialistas em pintura eletrostática com anos de experiência.</p>
         </div>
     </section>
-    <section id="contato">
-        <h2>Contato</h2>
-        <form action="backend/process_form.php" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2024 Empresa de Pintura Eletroestática. Todos os direitos reservados.</p>
-        <button id="dark-mode-toggle">Modo Escuro</button>
-    </footer>
-    <script src="assets/js/script.js"></script>
+    <?php include 'footer.php'; ?>
+    <script src="assets/js/form-validation.js"></script>
+    <script src="assets/js/scroll-animation.js"></script>
 </body>
 </html>

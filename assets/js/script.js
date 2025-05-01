@@ -1,22 +1,3 @@
-// Alternar entre modo claro e escuro
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-darkModeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-
-  // Salvar a preferência no localStorage
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-});
-
-// Carregar a preferência de modo escuro ao carregar a página
-window.addEventListener('DOMContentLoaded', () => {
-  const darkModePreference = localStorage.getItem('darkMode');
-  if (darkModePreference === 'enabled') {
-    document.body.classList.add('dark-mode');
-  }
-});
-
 // Validação básica do formulário de contato
 const form = document.querySelector('form');
 form.addEventListener('submit', (event) => {
