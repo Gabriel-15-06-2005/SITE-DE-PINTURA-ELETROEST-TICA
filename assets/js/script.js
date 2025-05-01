@@ -36,6 +36,12 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
+  if (mensagem.length < 10) {
+    event.preventDefault();
+    alert('A mensagem deve ter pelo menos 10 caracteres.');
+    return;
+  }
+
   alert('Formulário enviado com sucesso!');
 });
 
@@ -62,7 +68,13 @@ const handleScrollAnimation = () => {
   });
 };
 
-window.addEventListener('scroll', handleScrollAnimation);
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout);
+  }
+  scrollTimeout = setTimeout(handleScrollAnimation, 100);
+});
 
 // Inicializar animações ao carregar a página
 handleScrollAnimation();
