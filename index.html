@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Empresa de Pintura Eletroestática</title>
+    <meta name="description" content="Serviços de pintura eletrostática de alta qualidade.">
+    <title>Site de Pintura Eletrostática</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -102,55 +104,44 @@
 </head>
 <body>
     <header>
-        <h1>Pintura Eletroestática de Alumínio</h1>
-        <p>Qualidade, Durabilidade e Estética para o seu alumínio</p>
+        <h1>Bem-vindo ao Nosso Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="#sobre">Sobre Nós</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#parceiros">Parceiros</a>
-        <a href="#contato">Contato</a>
-    </nav>
-    <div class="container" id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Somos uma empresa especializada em pintura eletroestática, oferecendo soluções inovadoras para proteger e embelezar produtos de alumínio.</p>
-    </div>
-    <div class="container" id="servicos">
+    <section id="servicos">
         <h2>Nossos Serviços</h2>
-        <p>Oferecemos pintura eletroestática de alta qualidade para diversos setores.</p>
-        <div class="cta">
-            <p>Entre em contato conosco para um orçamento!</p>
-            <a href="mailto:contato@empresa.com.br">Solicitar Orçamento</a>
-        </div>
-        <h2>Cores Disponíveis</h2>
-        <div class="carrossel">
-            <div class="preto">Preto</div>
-            <div class="cinza">Cinza</div>
-            <div class="branco">Branco</div>
-            <div class="bronze">Bronze</div>
-            <div class="marrom">Marrom</div>
-            <div class="aco-corten">Aço Corten</div>
-            <div class="perita">Perita</div>
-            <div class="perita-gold">Perita Gold</div>
-            <div class="verde-claro">Verde Claro</div>
-        </div>
-    </div>
-    <div class="container" id="parceiros">
-        <h2>Parceiros</h2>
-        <div class="parceiros">
-            <img src="Decal alumínio logo.png">
-            <img src="decamp logo.png">
-            <img src="Logo monte cor.png">
-        </div>
-    </div>
-    <div class="container" id="contato">
+        <p>Oferecemos pintura eletrostática de alta qualidade.</p>
+    </section>
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em pintura eletrostática com anos de experiência.</p>
+    </section>
+    <section id="galeria">
+        <h2>Galeria</h2>
+        <img src="assets/img/exemplo.jpg" alt="Exemplo de pintura">
+    </section>
+    <section id="contato">
         <h2>Contato</h2>
-        <p>Email: <a href="mailto:contato@empresa.com.br">contato@empresa.com.br</a></p>
-        <p>Telefone: (11) 1234-5678</p>
-        <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
-    </div>
+        <form action="backend/process_form.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <button id="dark-mode-toggle">Modo Escuro</button>
     <footer>
         <p>&copy; 2024 Empresa de Pintura Eletroestática. Todos os direitos reservados.</p>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
